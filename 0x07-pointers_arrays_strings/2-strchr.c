@@ -11,7 +11,7 @@
  */
 char *_strchr(char *s, char c)
 {
-		inta;
+		int a;
 
 		while (1)
 		{
