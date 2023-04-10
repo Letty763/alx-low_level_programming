@@ -1,0 +1,1 @@
+This is a software project that focuses on manipulating individual bits in a binary representation of data. This project contains  a collection of functions or algorithms for performing various bit manipulation operations.
