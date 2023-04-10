@@ -1,0 +1,1 @@
+This project is a collection of C programs that demonstrate various techniques for manipulating bits in a byte. Each program focuses on a specific bit manipulation operation and provides a practical example of how it can be implemented in C.
