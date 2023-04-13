@@ -1,0 +1,1 @@
+0x15-file_io is a C programming language project that focuses on file input/output operations. It includes several functions that allow reading and writing data from and to files in a variety of formats.
