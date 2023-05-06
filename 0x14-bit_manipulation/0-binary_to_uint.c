@@ -1,29 +1,42 @@
 #include <stdio.h>
-#include "main.h"
+
+unsigned int binary_to_uint(const char *b);
+
+int main(void)
+{
+    const char *binary = "101010";
+    unsigned int decimal;
+
+    decimal = binary_to_uint(binary);
+    printf("%u\n", decimal);
+
+    return 0;
+}
 
 unsigned int binary_to_uint(const char *b)
 {
-	unsigned int bin, dec, i, rem, pval;
+    unsigned int binary, decimal, i, remainder, power;
 
-	if (b == NULL)
-		return (0);
-	bin = 0;
-	for (i = 0; b[i] != '\0'; ++i)
-	{
-		if (b[i] < 48 || b[i] > 49)
-			return (0);
-		bin = bin * 10 + (b[i] - '0');
-	}
-	dec = 0;
-	pval = 1;
-	if (bin == 0)
-		return (0);
-	while (bin)
-	{
-		rem = bin % 10;
-		dec = dec + (rem * pval);
-		bin = bin / 10;
-		pval *= 2;
-	}
-	return (dec);
+    if (b == NULL)
+        return 0;
+
+    binary = 0;
+    for (i = 0; b[i] != '\0'; ++i)
+    {
+        if (b[i] < '0' || b[i] > '1')
+            return 0;
+        binary = binary * 10 + (b[i] - '0');
+    }
+
+    decimal = 0;
+    power = 1;
+    while (binary)
+    {
+        remainder = binary % 10;
+        decimal = decimal + (remainder * power);
+        binary = binary / 10;
+        power *= 2;
+    }
+
+    return decimal;
 }
