@@ -3,24 +3,15 @@
 
 void print_binary(unsigned long int n)
 {
-	unsigned long int mask = 1UL << (sizeof(unsigned long int) * 8 - 1);
-	int flag = 0;
+	unsigned long int num;
+	int i;
 
-	while (mask > 0)
+	for (i = 31; i >= 0; i--)
 	{
-		if (n & mask)
-		{
-			putchar('1');
-			flag = 1;
-		}
-		else if (flag)
-			putchar('0');
-
-		mask >>= 1;
+		num = n >> i;
+		if (num & 1)
+			putchar(49);
+		else
+			putchar(48);
 	}
-
-	if (!flag)
-		putchar('0');
-
-	putchar('\n');
 }
