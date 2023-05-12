@@ -101,4 +101,3 @@ close_file(to);
  
 return (0);
 }
-
