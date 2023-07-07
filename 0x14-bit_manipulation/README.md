@@ -1,5 +1,1 @@
-<<<<<<< HEAD
-This project is a collection of C programs that demonstrate various techniques for manipulating bits in a byte. Each program focuses on a specific bit manipulation operation and provides a practical example of how it can be implemented in C.
-=======
-This is a software project that focuses on manipulating individual bits in a binary representation of data. This project contains  a collection of functions or algorithms for performing various bit manipulation operations.
->>>>>>> abd1c12fcde27e11a734fefe825ee4054f74845d
+This project is a collection of functions for manipulating bits in C programming language. It provides operations such as setting, clearing, flipping, and checking the value of specific bits. These functions aim to simplify and optimize bit-level operations in various applications.
