@@ -1,32 +1,39 @@
 #include "main.h"
 #include <stdlib.h>
- 
-/**
-* read_textfile- this reads a text file and prints it to the POSIX standard output
-* @filename: this is the text file that is going to be read
-* @letters: this is the number of letters it should read and print
-*
-* Return: this is the actual number of letters it could read and print,
-* Provided that the file can not be opened or read, return 0,
-* Provided that filename is NULL return 0,
-* In case write fails or does not write the expected amount of bytes,return {0}
-*/
 
+/**
+ * read_textfile - This function reads the content of a text file and outputs it to the POSIX standard output (stdout).
+ * @filename:A pointer to the file name.
+ * @letters:The number of letters in the file.
+ *           The function should read a specified number of letters from the file and print them.
+ *
+ * Return: If the function fails to read the file or if the `filename` parameter is `NULL`, the function should return `0`.
+ *         O/w -The function should return the actual number of bytes it successfully reads and prints from the file.
+ */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	char *buf;
-	ssize_t fd;
-	ssize_t w;
-	ssize_t t;
+	ssize_t o, r, w;
+	char *buffer;
 
-	fd = open(filename, O_RDONLY);
-	if (fd == -1)
+	if (filename == NULL)
 		return (0);
-	buf = malloc(sizeof(char) * letters);
-	t = read(fd, buf, letters);
-	w = write(STDOUT_FILENO, buf, t);
 
-	free(buf);
-	close(fd);
+	buffer = malloc(sizeof(char) * letters);
+	if (buffer == NULL)
+		return (0);
+
+	o = open(filename, O_RDONLY);
+	r = read(o, buffer, letters);
+	w = write(STDOUT_FILENO, buffer, r);
+
+	if (o == -1 || r == -1 || w == -1 || w != r)
+	{
+		free(buffer);
+		return (0);
+	}
+
+	free(buffer);
+	close(o);
+
 	return (w);
 }

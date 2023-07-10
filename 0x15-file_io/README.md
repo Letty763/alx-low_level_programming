@@ -1,1 +1,1 @@
-0x15-file_io is a C programming language project that focuses on file input/output operations. It includes several functions that allow reading and writing data from and to files in a variety of formats.
+This repository contains solutions for the project "0x15. C - File I/O" of the Holberton School curriculum. In this project, we explore the concepts of file input/output (I/O) in the C programming language.
