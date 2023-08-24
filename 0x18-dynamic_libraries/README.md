@@ -1,0 +1,1 @@
+This project explores the concept of dynamic libraries in C programming. Dynamic libraries are external files containing code that can be loaded into a program at runtime, providing modularization and code reuse.
