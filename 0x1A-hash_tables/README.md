@@ -1,0 +1,1 @@
+This project is an implementation of hash tables in the C programming language. Hash tables are a fundamental data structure used for efficient data storage and retrieval. This project explores the concepts and implementation of hash tables and provides a set of functions to work with them.
