@@ -1,0 +1,1 @@
+The 0x1C-makefiles project is a learning and reference repository for mastering the art of creating and using Makefiles in C programming. Makefiles are a powerful tool for automating the build process of complex projects, and this project aims to provide you with practical examples and explanations to help you understand and utilize Makefiles effectively.
