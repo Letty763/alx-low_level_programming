@@ -1,0 +1,1 @@
+This project, 0x1E-search_algorithms, focuses on implementing and understanding various search algorithms. These algorithms play a crucial role in finding specific elements within data structures efficiently.
